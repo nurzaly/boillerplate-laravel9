@@ -13,6 +13,7 @@
         "arcanedev/log-viewer": "9.0.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "jamesmills/laravel-timezone": "^1.11",
         "lab404/laravel-impersonate": "^1.7.3",
         "langleyfoxall/laravel-nist-password-rules": "^6.0",
         "laragear/two-factor": "^1.1",
