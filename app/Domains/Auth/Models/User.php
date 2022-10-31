@@ -2,24 +2,24 @@
 
 namespace App\Domains\Auth\Models;
 
-use App\Domains\Auth\Models\Traits\Attribute\UserAttribute;
-use App\Domains\Auth\Models\Traits\Method\UserMethod;
-use App\Domains\Auth\Models\Traits\Relationship\UserRelationship;
-use App\Domains\Auth\Models\Traits\Scope\UserScope;
-use App\Domains\Auth\Notifications\Frontend\ResetPasswordNotification;
-use App\Domains\Auth\Notifications\Frontend\VerifyEmail;
-use DarkGhostHunter\Laraguard\Contracts\TwoFactorAuthenticatable;
-use DarkGhostHunter\Laraguard\TwoFactorAuthentication;
+use Laravel\Sanctum\HasApiTokens;
 use Database\Factories\UserFactory;
-use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Lab404\Impersonate\Models\Impersonate;
-use Laravel\Sanctum\HasApiTokens;
-use Spatie\Permission\Traits\HasRoles;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Laragear\TwoFactor\TwoFactorAuthentication;
+use App\Domains\Auth\Models\Traits\Scope\UserScope;
+use App\Domains\Auth\Models\Traits\Method\UserMethod;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Domains\Auth\Notifications\Frontend\VerifyEmail;
+use Laragear\TwoFactor\Contracts\TwoFactorAuthenticatable;
+use App\Domains\Auth\Models\Traits\Attribute\UserAttribute;
+use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
+use App\Domains\Auth\Models\Traits\Relationship\UserRelationship;
+use App\Domains\Auth\Notifications\Frontend\ResetPasswordNotification;
 
 /**
  * Class User.
